@@ -6,11 +6,9 @@ import org.junit.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 public class SimpleRegexTest {
 
-    private static final String REGEX = "^[bc]*[a]+[bc]+"; // our first regex - 1
+    private static final String REGEX = "^[bc]*[a]+[bc]+";
 
     @Test
     public void viaFind() {
@@ -25,13 +23,13 @@ public class SimpleRegexTest {
         soft.assertAll();
     }
 
-        private static int runTest(String regex, String text) {
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(text);
-            int matches = 0;
-            while (matcher.find()) {
-                matches++;
-            }
-            return matches;
+    private static int runTest(String regex, String text) {
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(text);
+        int matches = 0;
+        while (matcher.find()) {
+            matches++;
         }
+        return matches;
+    }
 }
