@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class SimpleRegexTest {
 
-    private static final String REGEX = "^[bc]*[a]+[bc]+";
+    private static final String REGEX = "^[bc]*[a]+[bc]+"; // our first regex - 1
 
     @Test
     public void viaFind() {
